@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DSCRUTINY | Unlock the Power of Data</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Preloader, Cursor, and Background Canvas -->
+    <div id="preloader">
+      <div class="preloader-container">
+        <div class="preloader-graph"></div>
+        <div class="preloader-logo">DSCRUTINY<span>.</span></div>
+      </div>
+    </div>
+    <div id="custom-cursor"></div>
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Site Content (Initially Hidden) -->
+    <div id="site-content">
+      <header>
+        <div class="container">
+          <div class="logo magnetic-link">DSCRUTINY<span>.</span></div>
+          <nav>
+            <a href="#about" class="magnetic-link">About Us</a>
+            <a href="#services" class="magnetic-link">Solutions</a>
+            <a href="#industries" class="magnetic-link">Industries</a>
+            <a href="#contact" class="magnetic-link">Contact</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <!-- Hero Section -->
+        <section id="hero">
+          <div class="container">
+            <h1 id="hero-headline">
+              Unlock the Power of Data to Drive Smarter Business Decisions
+            </h1>
+            <p>
+              DSCRUTINY empowers businesses with cutting-edge data analytics
+              solutions to transform insights into actionable outcomes.
+            </p>
+            <div class="hero-buttons">
+              <a href="#contact" class="magnetic-button">Get Started</a>
+              <a href="#services" class="magnetic-button secondary"
+                >Explore Our Solutions</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about">
+          <div class="container about-container scroll-reveal">
+            <div class="about-text">
+              <div class="section-header-inline">
+                <h2>About DSCRUTINY</h2>
+                <div class="animated-line"></div>
+              </div>
+              <p>
+                At DSCRUTINY, we specialize in transforming complex data into
+                clear, actionable insights that drive business growth. With a
+                team of seasoned data scientists, engineers, and strategists, we
+                partner with companies across industries to harness the power of
+                their data for smarter decision-making. We focus on delivering
+                custom data solutions that are as unique as your business needs.
+              </p>
+              <p>
+                Whether you're looking to optimize operations, predict trends,
+                or enhance customer experiences, DSCRUTINY has the expertise to
+                turn your data challenges into opportunities.
+              </p>
+            </div>
+            <div class="about-visual">
+              <div class="visual-placeholder"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Our Services Section -->
+        <section id="services">
+          <div class="container">
+            <div class="section-header scroll-reveal">
+              <h2>Our Data Analytics Solutions</h2>
+              <p>Tailored Analytics for Every Business Challenge</p>
+              <div class="animated-line"></div>
+            </div>
+            <div class="services-grid">
+              <div class="service-card scroll-reveal">
+                <div class="icon">🔮</div>
+                <h3>Data Science and Predictive Analytics</h3>
+                <p>
+                  Leverage machine learning, AI, and advanced statistical
+                  techniques to make future-proof predictions. We help
+                  businesses predict customer behavior, demand trends, and
+                  operational bottlenecks.
+                </p>
+              </div>
+              <div
+                class="service-card scroll-reveal"
+                style="transition-delay: 0.1s"
+              >
+                <div class="icon">⚙️</div>
+                <h3>Data Engineering & Integration</h3>
+                <p>
+                  Transform raw data into valuable business insights. We design
+                  scalable data pipelines, integrate data sources, and implement
+                  robust data architectures to ensure you have clean, actionable
+                  data at your fingertips.
+                </p>
+              </div>
+              <div
+                class="service-card scroll-reveal"
+                style="transition-delay: 0.2s"
+              >
+                <div class="icon">📊</div>
+                <h3>Business Intelligence & Reporting</h3>
+                <p>
+                  Turn your data into interactive dashboards and insightful
+                  reports. Our team builds customized BI solutions to help you
+                  make data-driven decisions with real-time information.
+                </p>
+              </div>
+              <div
+                class="service-card scroll-reveal"
+                style="transition-delay: 0.3s"
+              >
+                <div class="icon">🧭</div>
+                <h3>Data Strategy & Consulting</h3>
+                <p>
+                  We provide expert consulting services to help businesses align
+                  their data operations with overall goals, ensuring that every
+                  initiative is backed by actionable insights.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Industries We Serve Section -->
+        <section id="industries">
+          <div class="container">
+            <div class="section-header scroll-reveal">
+              <h2>Industry Expertise</h2>
+              <p>
+                DSCRUTINY brings deep expertise across various sectors,
+                providing tailored analytics solutions for businesses ranging
+                from startups to large enterprises.
+              </p>
+              <div class="animated-line"></div>
+            </div>
+            <ul class="industries-list">
+              <li class="scroll-reveal">
+                <span>✓</span> Retail & E-Commerce: Predict demand, optimize
+                supply chains, and enhance customer experience.
+              </li>
+              <li class="scroll-reveal" style="transition-delay: 0.1s">
+                <span>✓</span> Finance & Banking: Drive smarter investment
+                decisions and improve risk management strategies.
+              </li>
+              <li class="scroll-reveal" style="transition-delay: 0.2s">
+                <span>✓</span> Healthcare: Improve patient outcomes through
+                predictive analytics and operational optimization.
+              </li>
+              <li class="scroll-reveal" style="transition-delay: 0.3s">
+                <span>✓</span> Manufacturing: Leverage operational data to
+                improve efficiency and reduce downtime.
+              </li>
+              <li class="scroll-reveal" style="transition-delay: 0.4s">
+                <span>✓</span> Telecommunications: Gain real-time insights into
+                network performance and customer experience.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section id="why-choose-us">
+          <div class="container">
+            <div class="section-header scroll-reveal">
+              <h2>Why DSCRUTINY?</h2>
+              <p>
+                At DSCRUTINY, we believe in delivering more than just data. We
+                deliver actionable intelligence that directly drives growth.
+                Here's why businesses trust us:
+              </p>
+              <div class="animated-line"></div>
+            </div>
+            <div class="why-us-grid">
+              <div class="why-us-card scroll-reveal">
+                <div class="icon">🎯</div>
+                <h3>Tailored Solutions</h3>
+                <p>
+                  Every business is different. We create customized strategies
+                  to meet your unique challenges.
+                </p>
+              </div>
+              <div
+                class="why-us-card scroll-reveal"
+                style="transition-delay: 0.1s"
+              >
+                <div class="icon">📈</div>
+                <h3>Data-Driven Decisions</h3>
+                <p>
+                  Our solutions are rooted in robust data analytics to drive
+                  smarter decision-making.
+                </p>
+              </div>
+              <div
+                class="why-us-card scroll-reveal"
+                style="transition-delay: 0.2s"
+              >
+                <div class="icon">🌐</div>
+                <h3>End-to-End Expertise</h3>
+                <p>
+                  From data collection to insights and strategy, we’ve got you
+                  covered across the entire data journey.
+                </p>
+              </div>
+              <div
+                class="why-us-card scroll-reveal"
+                style="transition-delay: 0.3s"
+              >
+                <div class="icon">🚀</div>
+                <h3>Scalable Impact</h3>
+                <p>
+                  We design solutions that not only solve today’s problems but
+                  also scale with your business growth.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact">
+          <div class="container">
+            <div class="section-header scroll-reveal">
+              <h2>Let’s Talk Data</h2>
+              <p>
+                Ready to unlock the potential of your data? Get in touch with
+                our team today to start transforming your business.
+              </p>
+              <div class="animated-line"></div>
+            </div>
+            <form class="contact-form scroll-reveal" action="#">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="Name"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="Email"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  required
+                  placeholder="Company"
+                />
+              </div>
+              <div class="form-group full-width">
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  placeholder="Message"
+                ></textarea>
+              </div>
+              <div class="form-group full-width">
+                <button type="submit" class="magnetic-button">
+                  Schedule a Consultation
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-links">
+              <a href="#about" class="magnetic-link">About Us</a>
+              <a href="#services" class="magnetic-link">Services</a>
+              <a href="#" class="magnetic-link">Case Studies</a>
+              <a href="#" class="magnetic-link">Blog</a>
+              <a href="#" class="magnetic-link">Careers</a>
+            </div>
+            <div class="footer-social">
+              <a href="#" class="magnetic-link">LinkedIn</a>
+              <a href="#" class="magnetic-link">Twitter</a>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>© 2025 DSCRUTINY Ltd. All Rights Reserved.</p>
+            <p>
+              <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
