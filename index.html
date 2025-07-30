@@ -1,130 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DSCRUTINY</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <!-- Font Awesome Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <!-- Custom interactive cursor -->
     <div class="cursor-spotlight"></div>
     <div class="cursor-dot"></div>
-    
+
     <header class="main-header">
-        <div class="container">
-            <a href="index.html" class="logo">DSCRUTINY</a>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <!--<li><a href="portfolio.html">Portfolio</a></li>-->
-                    <li><a href="contact.html" class="btn btn-nav">Contact Us</a></li>
-                </ul>
-            </nav>
-            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
-                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-            </button>
-        </div>
+      <div class="container">
+        <a href="index.html" class="logo">DSCRUTINY</a>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html" class="btn btn-nav">Contact Us</a></li>
+          </ul>
+        </nav>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+          <span class="bar"></span><span class="bar"></span
+          ><span class="bar"></span>
+        </button>
+      </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <canvas id="particle-canvas"></canvas>
-            <div class="container text-center">
-                <h1 class="animate-on-scroll">Intelligence, Redefined.</h1>
-                <p class="subtitle animate-on-scroll">We don't just analyze data. We give it a pulse. We build living ecosystems of insight that drive your business into the future.</p>
-                <div class="hero-buttons animate-on-scroll">
-                    <a href="services.html" class="btn btn-primary">Discover Our Capabilities</a>
-                </div>
-            </div>
-        </section>
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <canvas id="particle-canvas"></canvas>
+        <div class="container text-center">
+          <h1 class="animate-on-scroll">Intelligence, Redefined.</h1>
+          <p class="subtitle animate-on-scroll">
+            We don't just analyze data. We give it a pulse. We build living
+            ecosystems of insight that drive your business into the future.
+          </p>
+          <div class="hero-buttons animate-on-scroll">
+            <a href="services.html" class="btn btn-primary"
+              >Discover Our Capabilities</a
+            >
+          </div>
+        </div>
+      </section>
 
-        <!-- Who We Are Section -->
-        <section class="content-section bg-flow">
-            <div class="container grid-2-featured">
-                <div class="image-container animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084&auto=format&fit=crop" alt="A diverse team of professionals collaborating in a modern office">
-                </div>
-                <div class="content-text animate-on-scroll">
-                    <span class="section-tag">Our Philosophy</span>
-                    <h2>Beyond the Dashboard</h2>
-                    <p>At DSCRUTINY, we believe data should be more than a report—it should be a reflex. Our mission is to embed intelligence so deeply into your operations that data-driven decisions become second nature. We are a collective of strategists, architects, and AI pioneers dedicated to this single vision.</p>
-                    <a href="about.html" class="btn-link">Meet the Architects →</a>
-                </div>
-            </div>
-        </section>
+      <!-- Who We Are Section -->
+      <section class="content-section bg-flow">
+        <div class="container grid-2-featured">
+          <div class="image-container animate-on-scroll">
+            <img
+              src="img/pexels-fauxels-3184292.jpg"
+              alt="A diverse team of professionals collaborating in a modern office"
+            />
+          </div>
+          <div class="content-text animate-on-scroll">
+            <span class="section-tag">Our Philosophy</span>
+            <h2>Beyond the Dashboard</h2>
+            <p>
+              At DSCRUTINY, we believe data shouldn’t stop at a report, it
+              should become instinct. Our mission is to weave intelligence so
+              seamlessly into your operations that data-driven decision-making
+              becomes second nature. No friction, no hesitation, just action
+              powered by insight. We are unified by one vision: to transform
+              data from a static asset into a dynamic force that drives every
+              move you make.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <!-- Our Capabilities Section -->
-        <section class="content-section services-bg">
-            <div class="container text-center">
-                <span class="section-tag animate-on-scroll">Our Capabilities</span>
-                <h2 class="animate-on-scroll">The DSCRUTINY Ecosystem</h2>
-                <div class="service-cards-container">
-                    <div class="tilt-card animate-on-scroll">
-                        <div class="tilt-card-content">
-                            <h3>Business Intelligence</h3>
-                            <p>Chart your course with data-driven roadmaps and platform strategies.</p>
-                            <a href="services/strategy-advisory.html"><span>Explore Strategy</span></a>
-                        </div>
-                    </div>
-                    <div class="tilt-card animate-on-scroll">
-                        <div class="tilt-card-content">
-                            <h3>Data Engineering</h3>
-                            <p>Build a robust, scalable, and secure data foundation for the future.</p>
-                            <a href="services/engineer-your-data.html"><span>Explore Engineering</span></a>
-                        </div>
-                    </div>
-                    <div class="tilt-card animate-on-scroll">
-                        <div class="tilt-card-content">
-                            <h3>Web Development</h3>
-                            <p>Unleash predictive power with bespoke AI and ML model development.</p>
-                            <a href="services/differentiate-with-ai-ml.html"><span>Explore AI/ML</span></a>
-                        </div>
-                    </div>
-                </div>
+      <!-- Our Capabilities Section -->
+      <section class="content-section services-bg">
+        <div class="container text-center">
+          <span class="section-tag animate-on-scroll">Our Capabilities</span>
+          <h2 class="animate-on-scroll">The DSCRUTINY Ecosystem</h2>
+          <div class="service-cards-container">
+            <div class="tilt-card animate-on-scroll">
+              <div class="tilt-card-content">
+                <h3>Business Intelligence</h3>
+                <p>
+                  Turning raw data into real-time, actionable insights that
+                  drive smarter decisions.
+                </p>
+                <a href="services/business-intelligence.html"
+                  ><span>Explore Business Intelligence</span></a
+                >
+              </div>
             </div>
-        </section>
+            <div class="tilt-card animate-on-scroll">
+              <div class="tilt-card-content">
+                <h3>Data Engineering</h3>
+                <p>
+                  Building the pipelines and platforms that turn data into a
+                  reliable, scalable asset.
+                </p>
+                <a href="services/engineer-your-data.html"
+                  ><span>Explore Engineering</span></a
+                >
+              </div>
+            </div>
+            <div class="tilt-card animate-on-scroll">
+              <div class="tilt-card-content">
+                <h3>Web Operations</h3>
+                <p>
+                  Ensuring your web infrastructure runs smoothly, securely, and
+                  without interruption.
+                </p>
+                <a href="services/web.html"
+                  ><span>Explore Web Operations</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <!-- Why Choose Us Section -->
-        <section class="content-section bg-flow">
-            <div class="container grid-2-featured">
-                 <div class="content-text animate-on-scroll">
-                    <span class="section-tag">Why DSCRUTINY</span>
-                    <h2>Your Strategic Advantage</h2>
-                    <p>Partnering with us means more than just hiring a vendor. It means embedding a dedicated intelligence unit into your team, focused on delivering quantifiable results and a tangible return on your investment.</p>
-                    <div class="stats-container">
-                        <div class="stat-item"><h3 class="stat-number" data-target="300">0</h3><p>% Average ROI Delivered</p></div>
-                        <div class="stat-item"><h3 class="stat-number" data-target="50">0</h3><p>ms Avg. Query Reduction</p></div>
-                    </div>
-                </div>
-                <div class="image-container animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?q=80&w=1887&auto=format&fit=crop" alt="Client success story shown on a laptop screen">
-                </div>
+      <!-- Why Choose Us Section -->
+      <section class="content-section bg-flow">
+        <div class="container grid-2-featured">
+          <div class="content-text animate-on-scroll">
+            <span class="section-tag">Why DSCRUTINY</span>
+            <h2>Your Strategic Advantage</h2>
+            <p>
+              Choosing DSCRUTINY means more than just working with a vendor, it
+              means integrating a dedicated intelligence unit within your team.
+              We’re committed to driving measurable outcomes and maximizing your
+              return on investment.
+            </p>
+            <div class="stats-container">
+              <div class="stat-item">
+                <h3 class="stat-number" data-target="200">0</h3>
+                <p>% Average ROI Delivered</p>
+              </div>
+              <div class="stat-item">
+                <h3 class="stat-number" data-target="50">0</h3>
+                <p>ms Avg. Query Reduction</p>
+              </div>
             </div>
-        </section>
+          </div>
+          <div class="image-container animate-on-scroll">
+            <img
+              src="img/pexels-karolina-grabowska-5717712.jpg"
+              alt="Client success story shown on a laptop screen"
+            />
+          </div>
+        </div>
+      </section>
 
-        <!-- CTA Section Transformed -->
-        <section class="cta-section">
-            <div class="cta-background-orb"></div>
-            <div class="container text-center cta-content">
-                <h2 class="animate-on-scroll">Begin Your Transformation</h2>
-                <p class="subtitle animate-on-scroll">The future belongs to those who build it. Let's build yours together.</p>
-                <a href="contact.html" class="btn btn-primary btn-cta animate-on-scroll">Initiate Contact</a>
-            </div>
-        </section>
+      <!-- CTA Section Transformed -->
+      <section class="cta-section">
+        <div class="cta-background-orb"></div>
+        <div class="container text-center cta-content">
+          <h2 class="animate-on-scroll">Begin Your Transformation</h2>
+          <p class="subtitle animate-on-scroll">
+            The future belongs to those who build it. Let's build yours
+            together.
+          </p>
+          <a
+            href="contact.html"
+            class="btn btn-primary btn-cta animate-on-scroll"
+            >Initiate Contact</a
+          >
+        </div>
+      </section>
     </main>
 
     <footer class="main-footer">
-        <!-- The footer will be injected here by script.js -->
+      <!-- The footer will be injected here by script.js -->
     </footer>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"
+    ></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

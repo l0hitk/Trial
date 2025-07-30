@@ -1,4 +1,4 @@
-/* style.css | Project Singularity: The Final Cut */
+/* style.css | Project Singularity: Final Cut with Saira Font */
 
 /* 1. Global Styles & Variables
 -------------------------------------------------- */
@@ -9,10 +9,10 @@
     --primary-blue: #00c6ff;
     --primary-magenta: #e040fb;
     --text-light: #e6f1ff;
-    --text-muted: #ffffff;
+    --text-muted: #fff;
     --white: #ffffff;
-    --font-heading: 'Poppins', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    /* FIX: Font family updated to Saira */
+    --font-main: 'Saira', sans-serif;
     --header-height: 85px;
     --radius: 16px;
 }
@@ -23,11 +23,11 @@ html { scroll-behavior: smooth; }
 body {
     background-color: var(--bg-dark);
     color: var(--text-muted);
-    font-family: var(--font-body);
+    font-family: var(--font-main); /* Use Saira globally */
+    font-weight: 400; /* Set a base weight for readability */
     line-height: 1.7;
     font-size: 17px;
     overflow-x: hidden;
-    /* FIX: Re-enabled default cursor for usability */
     cursor: auto; 
 }
 
@@ -38,12 +38,12 @@ button { cursor: pointer; }
 
 /* FIX: Increased heading margin-bottom for spacing */
 h1, h2 { margin-bottom: 1rem; }
-h1 { font-size: clamp(3rem, 6.5vw, 6rem); line-height: 1.1; letter-spacing: -2px; }
-h2 { font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.2; }
-h3 { font-size: 1.6rem; }
+h1 { font-size: clamp(3rem, 6.5vw, 6rem); line-height: 1.1; letter-spacing: -2px; font-weight: 800; } /* Bolder for impact */
+h2 { font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.2; font-weight: 700; }
+h3 { font-size: 1.6rem; font-weight: 600; }
 p { margin-bottom: 1rem; max-width: 65ch; }
 .subtitle { font-size: 1.25rem; color: var(--text-muted); max-width: 60ch; margin-left: auto; margin-right: auto; }
-.section-tag { display: inline-block; font-family: var(--font-body); color: var(--primary-cyan); font-weight: 500; letter-spacing: 1px; margin-bottom: 1rem; }
+.section-tag { display: inline-block; color: var(--primary-cyan); font-weight: 500; letter-spacing: 1px; margin-bottom: 1rem; }
 
 /* 2. Custom Cursor (Enhancement Layer)
 -------------------------------------------------- */
@@ -51,14 +51,14 @@ p { margin-bottom: 1rem; max-width: 65ch; }
     position: fixed; top: 0; left: 0; width: 400px; height: 400px;
     border-radius: 50%; background: radial-gradient(circle, rgba(0, 198, 255, 0.08), transparent 70%);
     pointer-events: none; transform: translate(-50%, -50%); transition: opacity 0.3s; z-index: 9999;
-    opacity: 0; /* Hidden by default, shown by JS */
+    opacity: 0;
 }
 .cursor-dot {
     position: fixed; top: 0; left: 0; width: 8px; height: 8px;
     background-color: var(--primary-cyan); border-radius: 50%;
     pointer-events: none; transform: translate(-50%, -50%);
     transition: width 0.3s, height 0.3s, border 0.3s, background-color 0.3s; z-index: 10000;
-    opacity: 0; /* Hidden by default, shown by JS */
+    opacity: 0;
 }
 body:hover .cursor-spotlight, body:hover .cursor-dot { opacity: 1; }
 .cursor-dot.hovered {
@@ -79,12 +79,12 @@ body:hover .cursor-spotlight, body:hover .cursor-dot { opacity: 1; }
     border-bottom: 1px solid rgba(0, 246, 255, 0.1);
 }
 .main-header .container { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-size: 1.8rem; font-weight: 700; color: var(--white); letter-spacing: 3px; }
+.logo { font-size: 1.8rem; font-weight: 800; color: var(--white); letter-spacing: 3px; }
 .main-nav ul { list-style: none; display: flex; align-items: center; gap: 2.5rem; }
 .main-nav a { color: var(--text-light); font-weight: 500; transition: color 0.3s ease; }
 .main-nav a:not(.btn-nav):hover { color: var(--primary-cyan); text-shadow: 0 0 10px var(--primary-cyan); }
 .main-nav a.active { color: var(--primary-cyan); }
-.btn-nav { border: 1px solid var(--primary-cyan); padding: 0.6rem 1.2rem; border-radius: 8px; }
+.btn-nav { border: 1px solid var(--primary-cyan); padding: 0.6rem 1.2rem; border-radius: 8px; font-weight: 600; }
 .btn-nav:hover { background-color: rgba(0, 246, 255, 0.1); box-shadow: 0 0 15px rgba(0, 246, 255, 0.2); }
 
 /* 4. Hero Section & Canvas
@@ -98,13 +98,13 @@ body:hover .cursor-spotlight, body:hover .cursor-dot { opacity: 1; }
 
 /* 5. Buttons & Links
 -------------------------------------------------- */
-.btn { display: inline-block; padding: 1.1rem 2.2rem; border-radius: var(--radius); font-weight: 700; font-family: var(--font-heading); transition: all 0.3s ease; border: none; }
+.btn { display: inline-block; padding: 1.1rem 2.2rem; border-radius: var(--radius); font-weight: 700; transition: all 0.3s ease; border: none; }
 .btn-primary {
     background: linear-gradient(90deg, var(--primary-cyan) 0%, var(--primary-blue) 100%);
     color: var(--bg-dark); box-shadow: 0 5px 25px rgba(0, 198, 255, 0.3);
 }
 .btn-primary:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 15px 35px rgba(0, 198, 255, 0.4); }
-.btn-link { color: var(--primary-cyan); font-weight: 500; display: inline-block; transition: transform 0.3s ease; }
+.btn-link { color: var(--primary-cyan); font-weight: 600; display: inline-block; transition: transform 0.3s ease; }
 .btn-link:hover { transform: translateX(5px); }
 
 /* 6. Content Sections
@@ -122,8 +122,8 @@ body:hover .cursor-spotlight, body:hover .cursor-dot { opacity: 1; }
 -------------------------------------------------- */
 .services-bg {
     background-color: var(--bg-dark);
-    background-image: radial-gradient(at 47% 33%, hsl(181.00, 100%, 50%) 0, transparent 59%), 
-                      radial-gradient(at 82% 65%, hsl(282.55, 100%, 50%) 0, transparent 55%);
+    background-image: radial-gradient(at 82% 65%, hsl(181.00, 100%, 50%) 0, transparent 55%), 
+                      radial-gradient(at 47% 33%, hsl(282.55, 100%, 50%) 0, transparent 55%);
 }
 .service-cards-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; margin-top: 4rem; }
 .tilt-card {
@@ -136,25 +136,21 @@ body:hover .cursor-spotlight, body:hover .cursor-dot { opacity: 1; }
 .tilt-card-content { transform: translateZ(20px); }
 .tilt-card-content h3 { color: var(--white); }
 .tilt-card-content p { color: var(--text-light); }
-.tilt-card-content a { display: inline-block; margin-top: 1.5rem; color: var(--primary-cyan); font-weight: 500; }
+.tilt-card-content a { display: inline-block; margin-top: 1.5rem; color: var(--primary-cyan); font-weight: 600; }
 .tilt-card-content a span { transition: all 0.3s ease; display: inline-block; }
 .tilt-card-content a:hover span { transform: translateX(5px); }
 
 /* 8. Stats Section
 -------------------------------------------------- */
 .stats-container { display: flex; gap: 3rem; margin-top: 2rem; }
-.stat-item .stat-number { font-size: 4.5rem; color: var(--white); background: -webkit-linear-gradient(45deg, var(--primary-cyan), var(--primary-blue)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.stat-item .stat-number { font-size: 4.5rem; color: var(--white); background: -webkit-linear-gradient(45deg, var(--primary-cyan), var(--primary-blue)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 700; }
 .stat-item p { color: var(--text-muted); font-size: 1.1rem; }
 
 /* 9. CTA Section (Transformed & Centered)
 -------------------------------------------------- */
 .cta-section {
-    min-height: 80vh; /* Give it more space */
-    position: relative; overflow: hidden;
-    /* FIX: Using flexbox to perfectly center content */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-height: 80vh; position: relative; overflow: hidden;
+    display: flex; justify-content: center; align-items: center;
 }
 .cta-content { position: relative; z-index: 2; text-align: center; }
 .cta-background-orb {
@@ -171,7 +167,7 @@ body:hover .cursor-spotlight, body:hover .cursor-dot { opacity: 1; }
 }
 .btn-cta { padding: 1.5rem 3rem; font-size: 1.2rem; margin-top: 1rem; }
 
-/* 10. Footer (Re-architected)
+/* 10. Footer (Revamped)
 -------------------------------------------------- */
 .main-footer {
     background: var(--bg-accent); padding: 5rem 0 3rem 0;
@@ -179,32 +175,39 @@ body:hover .cursor-spotlight, body:hover .cursor-dot { opacity: 1; }
 }
 .footer-grid {
     display: grid;
-    /* NEW: More columns to accommodate all links */
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2.5rem;
     margin-bottom: 4rem;
-    text-align: left; /* FIX: Reset text-align for columns */
+    text-align: left;
 }
-.footer-column h4 { color: var(--white); margin-bottom: 1.2rem; }
+.footer-column h4 { color: var(--white); margin-bottom: 1.2rem; font-weight: 600; }
 .footer-column ul { list-style: none; padding: 0; }
 .footer-column ul li { margin-bottom: 0.8rem; }
-.footer-column ul a { color: var(--text-muted); transition: color 0.3s ease; }
+.footer-column ul a { color: var(--text-muted); transition: color 0.3s ease; font-weight: 400; }
 .footer-column ul a:hover { color: var(--primary-cyan); }
 
-/* FIX: New centered bottom section */
+/* FIX: Definitive Centering for Footer Bottom */
 .footer-bottom {
     border-top: 1px solid rgba(136, 146, 176, 0.2);
     padding-top: 3rem;
-    text-align: center;
+    /* Use flexbox for perfect centering */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.footer-social-icons {
-    display: flex; justify-content: center; gap: 1.5rem;
+.footer-social-icon {
+    display: inline-block;
+    margin-bottom: 1.5rem;
 }
-.footer-social-icons a svg {
+.footer-social-icon svg {
     width: 24px; height: 24px; fill: var(--text-muted); transition: all 0.3s ease;
 }
-.footer-social-icons a:hover svg { fill: var(--primary-cyan); transform: translateY(-3px); }
-.footer-copyright { margin-top: 2rem; font-size: 0.9rem; }
+.footer-social-icon:hover svg { fill: var(--primary-cyan); transform: translateY(-3px); }
+.footer-copyright {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0;
+}
 
 /* 11. Responsive Design
 -------------------------------------------------- */
@@ -212,13 +215,17 @@ body:hover .cursor-spotlight, body:hover .cursor-dot { opacity: 1; }
     body { font-size: 16px; }
     .grid-2-featured { grid-template-columns: 1fr; }
     .grid-2-featured .image-container { order: -1; }
+    .footer-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
 @media (max-width: 768px) {
     body { cursor: auto; }
     .cursor-spotlight, .cursor-dot { display: none; }
     .stats-container { flex-direction: column; }
-    .mobile-nav-toggle { display: block; }
+    .mobile-nav-toggle { display: block; z-index: 1001; background: none; border: none; }
+    .mobile-nav-toggle .bar { display: block; width: 25px; height: 3px; margin: 5px auto; background-color: var(--white); transition: all 0.3s ease-in-out; }
     .main-nav { position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background-color: var(--bg-accent); display: flex; justify-content: center; align-items: center; transition: right 0.5s ease-in-out; }
     .main-nav.is-open { right: 0; }
     .main-nav ul { flex-direction: column; gap: 3rem; }
+    .footer-grid { grid-template-columns: 1fr; }
 }
