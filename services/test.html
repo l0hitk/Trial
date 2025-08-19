@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QuantumAnalytics | Coming Soon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-cyan: #00f6ff;
+      --primary-blue: #00c6ff;
+      --text-light: #e6f1ff;
+      --text-muted: #a8b2d1;
+      --bg-dark: #000005;
+      --glass-bg: rgba(10, 20, 47, 0.7);
+      --font-main: 'Saira', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      width: 100%;
+      height: 100%;
+      font-family: var(--font-main);
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+    }
+
+    .bg-image {
+      background-image: url('https://images.unsplash.com/photo-1549921296-3a6b4cd14998?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'); /* Replace with a data/tech-themed image */
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.4);
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+      animation: zoomIn 25s ease-in-out infinite alternate;
+    }
+
+    @keyframes zoomIn {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.05); }
+    }
+
+    .overlay {
+      backdrop-filter: blur(10px);
+      background-color: rgba(0,0,0,0.4);
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .card {
+      background: var(--glass-bg);
+      padding: 3rem;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 246, 255, 0.2);
+      max-width: 600px;
+      animation: fadeInUp 1.5s ease-out both;
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .logo {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--primary-cyan);
+      margin-bottom: 1.5rem;
+      letter-spacing: 2px;
+    }
+
+    .tagline {
+      font-size: 1.3rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    .status {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--text-light);
+      animation: blink 2s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+
+    .notify-btn {
+      margin-top: 2rem;
+      padding: 1rem 2.5rem;
+      font-size: 1rem;
+      font-weight: 700;
+      border: none;
+      background: linear-gradient(90deg, var(--primary-cyan), var(--primary-blue));
+      color: var(--bg-dark);
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .notify-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0, 198, 255, 0.3);
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 2rem;
+      }
+
+      .logo {
+        font-size: 2rem;
+      }
+
+      .status {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-image"></div>
+  <div class="overlay"></div>
+
+  <div class="container">
+    <div class="card">
+      <div class="logo">Quantum<span style="color: var(--text-light);">Analytics</span></div>
+      <div class="tagline">Turning data into decisions. Empowering the future.</div>
+      <div class="status">We're building something amazing...</div>
+      <a href="mailto:contact@quantumanalytics.com"><button class="notify-btn">Notify Me</button></a>
+    </div>
+  </div>
+
+</body>
+</html>

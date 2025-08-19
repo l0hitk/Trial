@@ -94,3 +94,4 @@ footerHTML += `<p class="footer-copyright">${footerData.bottom.copyright}</p></d
         footerElement.innerHTML = footerHTML;
     }
 });
+

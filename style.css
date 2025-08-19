@@ -229,3 +229,4 @@ body:hover .cursor-spotlight, body:hover .cursor-dot { opacity: 1; }
     .main-nav ul { flex-direction: column; gap: 3rem; }
     .footer-grid { grid-template-columns: 1fr; }
 }
+
