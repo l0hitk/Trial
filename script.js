@@ -64,6 +64,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.1 });
     document.querySelectorAll('.animate-on-scroll, .stat-number').forEach(el => scrollObserver.observe(el));
 
+        // NEW: Specific observer for the timeline animation
+    const timelineObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 }); // Trigger when 50% of the timeline is visible
+
+    const timeline = document.querySelector('.process-timeline-container');
+    if (timeline) {
+        timelineObserver.observe(timeline);
+    }
+
     // --- 6. DYNAMIC FOOTER INJECTION (Complete with all links) ---
 const footerElement = document.querySelector('.main-footer');
     if (footerElement) {
@@ -72,7 +87,7 @@ const footerElement = document.querySelector('.main-footer');
                 { title: "Business Intelligence", links: [ { text: "Analytics Roadmap", href: "/services/analytics-roadmap.html" }, { text: "Data Strategy", href: "/services/data-strategy.html" }, { text: "Platform Strategy", href: "/services/platform-strategy.html" } ] },
                 { title: "Data Engineering", links: [ { text: "Data Modernization", href: "/services/data-modernization.html" }, { text: "Data Foundation", href: "/services/data-foundation.html" }, { text: "Data Operations", href: "/services/data-operations.html" } ] },
                 { title: "Web Operations", links: [ { text: "Domain Management", href: "#" }, { text: "Email Infrastructure", href: "#" }, { text: "Web Optimization", href: "#" }, { text: "Web Hosting", href: "#" } ] },
-                { title: "Company", links: [ { text: "About Us", href: "/about.html" }, { text: "Portfolio", href: "/portfolio.html" }, { text: "Contact", href: "/contact.html" }, { text: "Linkedin", href: "" } ] }
+                { title: "Company", links: [ { text: "About Us", href: "/about.html" }, /*{ text: "Portfolio", href: "/portfolio.html" },*/ { text: "Contact", href: "/contact.html" }, { text: "Linkedin", href: "" } ] }
             ],
             bottom: {
                 copyright: `© ${new Date().getFullYear()} DSCRUTINY Inc. All Rights Reserved.`,
