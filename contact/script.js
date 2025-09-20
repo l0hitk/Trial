@@ -115,6 +115,15 @@ if (footerElement) {
                 ] 
             },
             { 
+                title: "Web Operations", 
+                links: [ 
+                    { text: "Domain Management", href: "/services/web-operations.html" }, 
+                    { text: "Email Infrastructure", href: "/services/web-operations.html" }, 
+                    { text: "Web Optimization", href: "/services/web-operations.html" }, 
+                    { text: "Web Hosting", href: "/services/web-operations.html" } 
+                ] 
+            },
+            { 
                 title: "Company", 
                 links: [ 
                     { text: "About Us", href: "/about.html" },
