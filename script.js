@@ -116,33 +116,49 @@ if (footerElement) {
                     { text: "Contact", href: "/contact.html" }, 
                     { text: "LinkedIn", href: "https://www.linkedin.com/company/dscrutiny" } 
                 ] 
+            },
+            {
+                title: "Contact Us",
+                hasSeparator: true,
+                addressLines: [
+                    "<strong>Head Office</strong>",
+                    "24 Sanderling Close,",
+                    "Thornton Cleveleys, Blackpool.",
+                    "United Kingdom FY53FN",
+                    "<strong>UK:</strong> +44 74438 89535",
+                    "<strong>IN:</strong> +91 96067 23930"
+                ]
             }
         ],
         bottom: {
             copyright: `© ${new Date().getFullYear()} DSCRUTINY TECHNOLOGIES LIMITED. All Rights Reserved.`,
-            social: { 
-                name: "LinkedIn", 
-                href: "https://www.linkedin.com/company/dscrutiny", 
-                icon: '<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle>' 
-            }
         }
     };
 
     const pathPrefix = window.location.pathname.includes('/services/') ? '..' : '.';
-
     let footerHTML = '<div class="container"><div class="footer-grid">';
     footerData.columns.forEach(column => {
-        footerHTML += `<div class="footer-column"><h4>${column.title}</h4><ul>`;
-        column.links.forEach(link => { 
-            const isAbsoluteUrl = link.href.startsWith('http') || link.href.startsWith('https');
-            const linkHref = isAbsoluteUrl ? link.href : `${pathPrefix}${link.href}`;
-            footerHTML += `<li><a href="${linkHref}">${link.text}</a></li>`; 
-        });
-        footerHTML += '</ul></div>';
+        const columnClass = column.hasSeparator ? 'footer-column footer-separator' : 'footer-column';
+        footerHTML += `<div class="${columnClass}"><h4>${column.title}</h4>`;
+
+        if (column.links && column.links.length > 0) {
+            footerHTML += '<ul>';
+            column.links.forEach(link => { 
+                const isAbsoluteUrl = link.href.startsWith('http');
+                const linkHref = isAbsoluteUrl ? link.href : `${pathPrefix}${link.href}`;
+                footerHTML += `<li><a href="${linkHref}">${link.text}</a></li>`; 
+            });
+            footerHTML += '</ul>';
+        }
+
+        if (column.addressLines && column.addressLines.length > 0) {
+            footerHTML += `<p class="footer-address">${column.addressLines.join('<br>')}</p>`;
+        }
+        
+        footerHTML += '</div>';
     });
     
     footerHTML += '</div><div class="footer-bottom">';
-
     footerHTML += `<p class="footer-copyright">${footerData.bottom.copyright}</p>`;
     footerElement.innerHTML = footerHTML;
 }

@@ -269,3 +269,18 @@ main { padding-top: var(--header-height); }
     .process-step::after { left: 0px; }
     .pillar-grid { grid-template-columns: 1fr; }
 }
+
+@media (min-width: 768px) {
+  .footer-separator {
+    border-left: 1px solid white;
+  }
+  .footer-column {
+  padding-left: 2rem;
+}
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 0.1rem; 
+}

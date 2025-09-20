@@ -203,3 +203,18 @@ p { margin-bottom: 1rem; max-width: 65ch; }
     .process-step { padding-left: 50px; }
     .process-step::after { left: 0px; }
 }
+@media (min-width: 768px) {
+  .footer-separator {
+    border-left: 1px solid white;
+    padding-left: 2rem;
+  }
+  .footer-column {
+  padding-left: 3rem;
+}
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 0.1rem; 
+}
