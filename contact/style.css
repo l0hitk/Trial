@@ -218,3 +218,15 @@ p { margin-bottom: 1rem; max-width: 65ch; }
   grid-template-columns: repeat(5, 1fr); 
   gap: 0.1rem; 
 }
+
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
